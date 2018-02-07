@@ -10,7 +10,7 @@ describe 'as a user' do
 
 
       click_on "Delete"
-save_and_open_page
+
       expect(page).not_to have_content("Tony Stark")
       expect(current_path).to eq(students_path)
     end
