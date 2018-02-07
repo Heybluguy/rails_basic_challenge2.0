@@ -15,3 +15,8 @@ describe 'as a user' do
     end
   end
 end
+
+# User Can See a List of Students
+# As a user
+# When I visit /students
+# I see a list of student names
