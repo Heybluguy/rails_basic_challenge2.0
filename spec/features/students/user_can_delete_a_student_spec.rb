@@ -3,9 +3,16 @@ require 'rails_helper'
 describe 'as a user' do
   describe 'when i am on student index path and i click on delte next to a name' do
     scenario 'then i shouldnt see the name of the student any more' do
+      student = Student.create!(name: "IronMan")
+
+
       visit students_path
 
+
       click_on "Delete"
+save_and_open_page
+      expect(page).not_to have_content("Tony Stark")
+      expect(current_path).to eq(students_path)
     end
   end
 end
