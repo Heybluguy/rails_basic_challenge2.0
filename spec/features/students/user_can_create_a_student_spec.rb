@@ -9,7 +9,6 @@ describe 'as a user' do
       fill_in "student[name]",	with: "Bruce Banner"
       click_on "Create Student"
 
-      expect(current_path).to eq(students_path)
       expect(page).to have_content("Bruce Banner")
     end
   end
