@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :students, only: [:show, :index, :new, :create, :edit, :update, :destroy] do
-    resources :addresses, only: [:new]
+    resources :addresses, only: [:new, :index]
   end
 
 

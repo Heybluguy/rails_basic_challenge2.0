@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe 'as a user i can create a new address' do
   describe 'when im on new address path' do
-    scenario 'then i can see a form to create a new address' d
+    scenario 'then i can see a form to create a new address' do
       student = Student.create!(name: "Thor")
 
-      visit new_student_address_path
+      visit new_student_address_path(student)
 
       fill_in "address[description]",	with: "Home sweet home"
       fill_in "address[street]",	with: "Thunder road"
