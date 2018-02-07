@@ -6,8 +6,13 @@ describe 'as a user' do
       student = Student.create!(name: "Elon Musk")
 
       visit student_path(student)
-
+      
       expect(page).to have_content("Elon Musk")
     end
   end
 end
+
+
+# As a user
+# When I visit /students/:id
+# I see the name of a student
